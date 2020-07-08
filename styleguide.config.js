@@ -6,7 +6,8 @@ module.exports = {
 	version: "0.0.1",
 	assetsDir: "public",
 	pagePerSection: true,
-	defaultExample: true,
+	defaultExample: false,
+	skipComponentsWithoutExample: true,
 	sections: [
 		{
 			name: "Introduction",
@@ -20,21 +21,27 @@ module.exports = {
 			usageMode: "expand", // 'hide' | 'collapse' | 'expand'
 		},
 		{
-			name: "Theming",
+			name: "Documentation",
+			content: "docs/Documentation.md",
 			sections: [
 				{
-					name: "Material UI Theme",
+					name: "Customize Theme (material-ui)",
 					content: "docs/Theme.md",
 				},
+				{
+					name: "Show notifications (notistack)",
+					content: "docs/Notifications.md",
+				},
+				{
+					name: "Data fetching & storage (redux)",
+					content: "docs/Redux.md",
+				},
+				{
+					name: "Navigation (react-router)",
+					content: "docs/Navigation.md",
+				},
 			],
-		},
-		{
-			name: "Notifications",
-			content: "docs/Notifications.md",
-		},
-		{
-			name: "Redux",
-			content: "docs/Redux.md",
+			sectionDepth: 1,
 		},
 	],
 

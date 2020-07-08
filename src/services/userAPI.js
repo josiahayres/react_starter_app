@@ -6,11 +6,12 @@ import axiosInstance from "./axios";
  * @param {string} password Password to login with.
  * @throws {error} Message if the API call failed.
  */
-async function login(username = "", password = "") {
-	const { data } = axiosInstance.get(
-		`https://www.google.com/search?q=${username}`
-	);
+export async function login(username = "", password = "") {
+	const { data } = axiosInstance.get(`/login`, {
+		data: {
+			username,
+			password,
+		},
+	});
 	return data;
 }
-
-export { login };

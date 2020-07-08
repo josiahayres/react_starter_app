@@ -1,5 +1,7 @@
 # WEX REACT
 
+## Code Structure
+
 ### /src
 
 #### | `index.js`
@@ -22,8 +24,6 @@ Responsible for mapping each file in `/pages/` folder to a app route. Initial co
 
 We split this out into a separate file from `App.js` so we can show notifications from the navigation bar (can't `useSnackbar` in the same component as notification provider)
 
----
-
 #### | /components
 
 Reusable components that can be used anywhere.
@@ -44,6 +44,23 @@ Contains store, root reducer and auth
 
 All files in here make different API calls, and will likely be used in redux reducers.
 
-##### | /services/`axios.js`
+#### | /services/`axios.js`
 
-Creates and exports an instance of axios. Adds some global checking to give better messages if API calls fail.
+Creates and exports an instance of axios that adds checking to give better messages if API calls fail.
+
+```js
+import axiosInstance from "./axios";
+axiosInstance.get(url);
+```
+
+Don't use the NPM package version of axios:
+
+~~`import axios from "axios";`~~
+
+## Documentation
+
+React styleguidist
+
+## Testing
+
+## Base

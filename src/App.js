@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+// Setup Redux
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import appTheme from "./config/appTheme";
+
+// Setup Notifications
+import { SnackbarProvider } from "notistack";
+
+// This file connects the /pages folder with an app URL route
+import Routes from "./Routes";
+
+// Setup
+const theme = createMuiTheme(appTheme);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const notistackRef = React.createRef();
+	const onClickDismiss = (key) => () => {
+		notistackRef.current.closeSnackbar(key);
+	};
+
+	return (
+		<Provider store={store}>
+			<ThemeProvider theme={theme}>
+				<SnackbarProvider
+					maxSnack={3}
+					anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+					preventDuplicate={true}
+					ref={notistackRef}
+					action={(key) => (
+						<button onClick={onClickDismiss(key)}>dismiss</button>
+					)}
+				>
+					<Routes />
+				</SnackbarProvider>
+			</ThemeProvider>
+		</Provider>
+	);
 }
 
 export default App;

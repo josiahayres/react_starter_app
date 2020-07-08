@@ -61,6 +61,10 @@ Don't use the NPM package version of axios:
 
 React styleguidist
 
+Will look for all `.js` files inside the `/components` folder.
+
+Each component needs to have a `Name.examples.md`.
+
 ## Testing
 
 ## Base

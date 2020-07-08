@@ -16,7 +16,7 @@ Configures and makes the following available to all pages in the app:
 
 Renders `./Routes.js`
 
-#### `Routes.js`
+#### | `Routes.js`
 
 Responsible for mapping each file in `/pages/` folder to a app route. Initial configuration uses a switch component to only show one page at a time.
 
@@ -24,26 +24,26 @@ We split this out into a separate file from `App.js` so we can show notification
 
 ---
 
-#### /components
+#### | /components
 
 Reusable components that can be used anywhere.
 
-#### /hooks
+#### | /hooks
 
 Custom react hooks that can be reused
 
-#### /pages
+#### | /pages
 
 Each file in here maps to a URL route. See `./Routes.js` for how it's implemented.
 
-#### /redux
+#### | /redux
 
 Contains store, root reducer and auth
 
-#### /services
+#### | /services
 
 All files in here make different API calls, and will likely be used in redux reducers.
 
-##### `axios.js`
+##### | /services/`axios.js`
 
 Creates and exports an instance of axios. Adds some global checking to give better messages if API calls fail.

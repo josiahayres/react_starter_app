@@ -23,7 +23,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.5.7
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}  
         BRANCH: master
         FOLDER: styleguide
 

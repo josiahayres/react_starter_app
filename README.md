@@ -1,4 +1,4 @@
-# WEX REACT
+# REACT STARTER APP
 
 ## Code Structure
 
@@ -56,6 +56,10 @@ axiosInstance.get(url);
 Don't use the NPM package version of axios:
 
 ~~`import axios from "axios";`~~
+
+#### | /styleguide
+
+Contains Wrapper component for styleguide, makes Redux, Notistack, Material UI Theme available in styleguide components.
 
 ## Documentation
 

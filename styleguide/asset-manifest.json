@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/build/main.991d3152.js",
+    "runtime-main.js": "/build/bundle.e4600816.js",
+    "build/2.76c1fdc2.js": "/build/2.76c1fdc2.js",
+    "build/2.76c1fdc2.js.LICENSE.txt": "/build/2.76c1fdc2.js.LICENSE.txt",
+    "favicon.ico": "/favicon.ico",
+    "index.html": "/index.html",
+    "logo192.png": "/logo192.png",
+    "logo512.png": "/logo512.png",
+    "manifest.json": "/manifest.json",
+    "precache-manifest.ec085db60faa1f9388982d1ae2a17d35.js": "/precache-manifest.ec085db60faa1f9388982d1ae2a17d35.js",
+    "robots.txt": "/robots.txt",
+    "service-worker.js": "/service-worker.js"
+  },
+  "entrypoints": [
+    "build/bundle.e4600816.js",
+    "build/2.76c1fdc2.js",
+    "build/main.991d3152.js"
+  ]
+}

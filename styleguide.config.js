@@ -1,9 +1,10 @@
 const path = require("path");
 const fs = require("fs");
+const pkg = require("./package.json");
 
 module.exports = {
-	title: "WEX_REACT Style Guide",
-	version: "0.0.1",
+	title: "REACT STARTER APP Style Guide",
+	version: `Version ${pkg.version}`,
 	assetsDir: "public",
 	pagePerSection: true,
 	defaultExample: false,

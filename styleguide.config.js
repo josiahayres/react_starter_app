@@ -56,7 +56,7 @@ module.exports = {
 		return `import ${name} from '${dir}';`;
 	},
 	getExampleFilename(componentPath) {
-		return componentPath.replace(/\.jsx?$/, ".examples.md");
+		return componentPath.replace(/\.jsx?$/, ".md");
 	},
 	updateExample(props, exampleFilePath) {
 		// props.settings are passed by any fenced code block, in this case
